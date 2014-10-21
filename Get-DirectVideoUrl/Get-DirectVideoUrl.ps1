@@ -4,9 +4,9 @@
 # Date: 2014/10/20
 #
 # Usage: 
-#    get-tube.ps1 -url -filename "C:\_wip\keepvid\input.txt"
-#    get-tube.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q"
-#    get-tube.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q" -filename "C:\_wip\keepvid\input.txt"
+#    .\Get-DirectVideoUrl.ps1 -url -filename "C:\inputDownloadList.txt"
+#    .\Get-DirectVideoUrl.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q"
+#    .\Get-DirectVideoUrl.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q" -filename "C:\inputDownloadList.txt"
 #
 #================================================
 
