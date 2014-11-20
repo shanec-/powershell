@@ -3,7 +3,7 @@
 # Author: Shane Carvalho (shanec_@hotmail.com)
 # Date: 2014/10/20
 #
-# Usage: 
+# Usage:
 #    .\Get-DirectVideoUrl.ps1 -url -filename "C:\inputDownloadList.txt"
 #    .\Get-DirectVideoUrl.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q"
 #    .\Get-DirectVideoUrl.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q" -filename "C:\inputDownloadList.txt"
@@ -33,11 +33,12 @@ function Get-DirectDownloadUrl([string]$sourceHtml)
     $result = $navigator.Evaluate("//div[@id='dl']/b[contains(text(),'Max 480')]/preceding-sibling::a/@href").InnerXml
     $result
 }
-#==================================================
 
-#TODO: check if the assembly is already loaded. Not required to do again if it is already loaded
-$scriptDir = Get-ScriptDirectory 
+#===================[Imports and Stuff]===============================
+$scriptDir = Get-ScriptDirectory
+
 Add-Type -Path "$scriptDir\HtmlAgilityPack.dll"
+Add-Type -AssemblyName System.Web
 
 $vids = $url.Split(" ", [System.StringSplitOptions]::RemoveEmptyEntries);
 
@@ -56,7 +57,7 @@ foreach($vid in $vids)
 
     $keepRequestUrl = $keepVidBaseUrl + [System.Web.HttpUtility]::UrlEncode($vid)
     $res= Invoke-WebRequest -Uri $keepRequestUrl
-    
+
     $directUrl = Get-DirectDownloadUrl($res.RawContent)
 
     Add-Content -Value "`n$directUrl" -Path "$scriptDir\result.txt"
