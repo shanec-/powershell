@@ -4,7 +4,7 @@
 # Date: 2014/10/20
 #
 # Usage:
-#    .\Get-DirectVideoUrl.ps1 -url -filename "C:\inputDownloadList.txt"
+#    .\Get-DirectVideoUrl.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I"
 #    .\Get-DirectVideoUrl.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q"
 #    .\Get-DirectVideoUrl.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q" -filename "C:\inputDownloadList.txt"
 #
