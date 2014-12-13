@@ -2,10 +2,10 @@ PowerShell
 ==========
 This repository hosts the collection of PowerShell scripts that I develop and use frequently.  
 
-##Team Foundation Server
+###Team Foundation Server
 Scripts related to interacting with Team Foundation Server (TFS). This includes both the Visual Studio Online as well as the on-premises versions. These are hosted within the `TFS` folder.
 
-###Get-FilesModifiedByChangeset
+####Get-FilesModifiedByChangeset
 
 This script is useful in figuring out the files that changed in a given timeline. The timeline can be provided in the from of a date range or start and end changeset ids.
 
@@ -14,10 +14,10 @@ The script uses the REST endpoint in for its implementation. Therefore it would 
 	Usage:
 		.\Get-FilesModifiedByChangeset.ps1 http://mytfsaccount.visualstudio.com/defaultcollection -startChangesetId 100 -endChangesetId 500 
 
-##Miscellaneous
+###Miscellaneous
 The `/Misc` folder contains scripts that do not fit into any of the other categories.
 
-###Get-DirectVideoUrl
+####Get-DirectVideoUrl
 Helper Script to extract the direct-download url of external video services (mainly youtube.com) using the the keepvid.com service. 
 
 	Usage:
