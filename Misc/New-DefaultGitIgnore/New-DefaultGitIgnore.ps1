@@ -1,0 +1,1 @@
+(iwr https://raw.githubusercontent.com/github/gitignore/master/VisualStudio.gitignore).Content | Out-File .gitignore
