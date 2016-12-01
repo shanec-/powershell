@@ -26,5 +26,6 @@ Helper Script to extract the direct-download url of external video services (mai
     	.\Get-DirectVideoUrl.ps1 -url "http://www.youtube.com/watch?v=duKL2dAJN6I http://www.youtube.com/watch?v=R4ajQ-foj2Q" -filename "C:\inputDownloadList.txt"
 
 
-
+####New-DefaultGitIgnore
+Script initializes a new `.gitignore` using with the github Visual Studio template.  
 
